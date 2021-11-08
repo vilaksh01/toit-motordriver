@@ -27,7 +27,7 @@ class SCMDDiagnostics:
   REG_OOR_CNT := 0
   REG_RO_WRITE_CNT := 0
 
-class QuiicScmd:
+class Scmd:
   static REG_DEFAULT_ADDRESS_ ::= 0x00
   static ID_WORD_ ::= 0xA9
   static START_SLAVE_ADDR_ ::= 0x50
