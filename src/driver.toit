@@ -28,8 +28,8 @@ class SCMDDiagnostics:
   REG_RO_WRITE_CNT := 0
 
 class Scmd:
-  static REG_DEFAULT_ADDRESS_ ::= 0x00
-  static ID_WORD_ ::= 0xA9
+  //static REG_DEFAULT_ADDRESS_ ::= 0x01
+  static DEFAULT_ID_ ::= 0xA9
   static START_SLAVE_ADDR_ ::= 0x50
   static MAX_SLAVE_ADDR_ ::= 0x5F
   static MASTER_LOCk_KEY_ ::= 0x9B
@@ -66,7 +66,7 @@ class Scmd:
 
   // Address map
   static FID_  ::= 0x00
-  static REGISTER_ID_ ::= 0x01
+  static REG_ID_ADDRESS_ ::= 0x01
   static SLAVE_ADDR_     ::= 0x02
   static CONFIG_BITS_   ::= 0x03
   static U_I2C_RD_ERR_  ::= 0x04
@@ -164,13 +164,13 @@ class Scmd:
     reg_ = device.registers   
 
   on:
-    reg := reg_.read_u8 REG_DEFAULT_ADDRESS_
-    if reg != I2C_ADDRESS: throw "INAVLID_CHIP"
+    reg := reg_.read_u8 REG_ID_ADDRESS_
+    if reg != DEFAULT_ID_ : throw "INAVLID_CHIP"
 
   begin:
     // dummy read
-    reg_.read_u8 REGISTER_ID_
-    return reg_.read_u8 REGISTER_ID_
+    reg_.read_u8 REG_ID_ADDRESS_
+    return reg_.read_u8 REG_ID_ADDRESS_
 
   ready -> bool:
     // returns if driver is ready

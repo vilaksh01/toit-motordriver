@@ -19,8 +19,9 @@ main:
   BWD := 1
 
   motor.on
-  // motor.begin
   print "motor on"
+  motor.begin
+  print "motor begin"
 
 
 
