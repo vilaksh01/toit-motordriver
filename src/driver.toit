@@ -195,7 +195,7 @@ class Scmd:
   reset_:
     // reset driver functions for H bridges
 
-  set_drive motorNum/int level/int direction/int:
+  set_drive motorNum/int direction/int level/int:
     // drive a motor at given level
     // param motorNum/int: motor number from 0 to 33
     // param level/int: level from 0 to 255
