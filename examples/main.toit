@@ -8,7 +8,7 @@ main:
     --sda=gpio.Pin 21
     --scl=gpio.Pin 22
   
-  device := bus.device scmd.I2C_ADDRESS_ALT
+  device := bus.device scmd.I2C_ADDRESS
 
   motor := scmd.Scmd device
 
