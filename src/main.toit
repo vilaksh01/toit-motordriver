@@ -7,7 +7,7 @@ main:
     --sda=gpio.Pin 21
     --scl=gpio.Pin 22
   
-  device := bus.device scmd.I2C_ADDRESS
+  device := bus.device scmd.I2C_ADDRESS_ALT
 
   motor := scmd.Scmd device
 
@@ -18,8 +18,9 @@ main:
   BWD := 1
 
   motor.on
+  motor.begin
   print "motor on"
-  
+
 
 
 

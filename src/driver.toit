@@ -158,10 +158,10 @@ class Scmd:
   static REM_READ_         ::= 0x7E
 
 
-  reg_/serial.Registers ::= ?
+  reg_/serial.Registers
 
-  constructor dev/serial.Device:
-    reg_ = dev.registers   
+  constructor device/serial.Device:
+    reg_ = device.registers   
 
   on:
     reg := reg_.read_u8 REG_DEFAULT_ADDRESS_
@@ -284,7 +284,7 @@ class Scmd:
   //   myDiag.U_I2C_RD_ERR = 0
   //   myDiag.U_I2C_WR_ERR = 0
   //   myDiag.U_BUF_DUMPED = 0
-  //   myDiag.E_I2C_RD_ERR = read_remote_register()
+ 
 
 
 
