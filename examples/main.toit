@@ -19,7 +19,7 @@ main:
   BWD := 1
 
   motor.on
-  motor.begin
+  // motor.begin
   print "motor on"
 
 
