@@ -1,4 +1,5 @@
-import .quiicScmd as scmd 
+import quiicScmd as scmd
+
 import i2c
 import gpio
 
