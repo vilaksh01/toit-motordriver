@@ -2,7 +2,7 @@
 
 Driver for the SparkFun Qwiic motor driver.
 
-![](https://cdn.sparkfun.com//assets/parts/1/4/0/2/9/15451-SparkFun_Qwiic_Motor_Driver-01.jpg)
+![](https://github.com/vilaksh01/toit-motordriver/blob/main/assets/driver.png)
 
 The SparkFun Qwiic motor driver makes an SCMD accessible through I2C. The
 SCMD supports 4245 PSOC and 2-channel motor ports, which are accessible
