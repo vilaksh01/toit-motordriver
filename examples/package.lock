@@ -1,6 +1,5 @@
-# Toit Lock File.
 prefixes:
-  quiicScmd: ..
+  quiic_scmd: ..
 packages:
   ..:
     path: ..
