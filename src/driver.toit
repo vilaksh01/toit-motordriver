@@ -110,6 +110,10 @@ class Scmd:
     if not 0 <= motor <= 33: throw "INVALID MOTOR NUMBER"
     if polarity != POLARITY_NORMAL and polarity != POLARITY_INVERTED: throw "INVALID POLARITY"
 
+    // We are using the polarity variable directly as bit value.
+    // Make sure it's set correctly.
+    assert: POLARITY_NORMAL == 0 and POLARITY_INVERTED == 1
+
     if motor == 0:
       reg_.write_u8 MOTOR_A_INVERT_ polarity
     if motor == 1:
@@ -129,7 +133,6 @@ class Scmd:
         register = INV_26_33
         motor -= 26
 
-      assert: POLARITY_NORMAL == 0 and POLARITY_INVERTED == 1
       mask := 1 << motor
       old := reg_.read_u8 register
       // Clear the motor's bit.
